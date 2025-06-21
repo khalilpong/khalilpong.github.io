@@ -7,22 +7,22 @@
 
 :root {
     /* 主色调 */
-    --primary-color: #8B4513;
-    --secondary-color: #D2B48C;
-    --accent-color: #CD853F;
-    --text-color: #2C1810;
-    --text-light: #5D4E37;
-    --text-muted: #8B7765;
+    --primary-color: #2C3E50;
+    --secondary-color: #95A5A6;
+    --accent-color: #3498DB;
+    --text-color: #2C3E50;
+    --text-light: #34495E;
+    --text-muted: #7F8C8D;
     
     /* 背景色 */
-    --bg-main: #FAF6F0;
+    --bg-main: #F8F9FA;
     --bg-card: #FFFFFF;
-    --bg-overlay: rgba(139, 69, 19, 0.9);
+    --bg-overlay: rgba(44, 62, 80, 0.9);
     
     /* 其他颜色 */
-    --border-color: #E8DDD4;
-    --shadow: rgba(139, 69, 19, 0.1);
-    --highlight: #FFA500;
+    --border-color: #E1E8ED;
+    --shadow: rgba(44, 62, 80, 0.1);
+    --highlight: #E74C3C;
     
     /* 间距 */
     --spacing-xs: 0.5rem;
@@ -56,7 +56,7 @@ body {
     top: 0;
     width: 320px;
     height: 100vh;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    background: linear-gradient(135deg, var(--primary-color) 0%, #34495E 50%, var(--accent-color) 100%);
     overflow-y: auto;
     z-index: 1000;
     transition: transform 0.3s ease;
@@ -325,9 +325,9 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: #654321;
+    background-color: #1A252F;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(139, 69, 19, 0.3);
+    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.3);
 }
 
 .btn-secondary {
@@ -337,19 +337,19 @@ body {
 }
 
 .btn-secondary:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--accent-color);
     color: white;
 }
 
 .btn-fun {
-    background: linear-gradient(45deg, var(--highlight), #FF6347);
+    background: linear-gradient(45deg, var(--accent-color), #5DADE2);
     color: white;
     font-weight: 600;
 }
 
 .btn-fun:hover {
     transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 6px 16px rgba(255, 165, 0, 0.4);
+    box-shadow: 0 6px 16px rgba(52, 152, 219, 0.4);
 }
 
 .about-image {
@@ -389,7 +389,7 @@ body {
 }
 
 .highlight {
-    background: linear-gradient(120deg, transparent 0%, var(--secondary-color) 0%, var(--secondary-color) 100%, transparent 100%);
+    background: linear-gradient(120deg, transparent 0%, #AED6F1 0%, #AED6F1 100%, transparent 100%);
     padding: 2px 6px;
     border-radius: 4px;
     font-weight: 500;
@@ -514,7 +514,7 @@ body {
     text-align: center;
     margin: var(--spacing-xl) 0;
     padding: var(--spacing-lg);
-    background: linear-gradient(135deg, var(--bg-card), var(--secondary-color));
+    background: linear-gradient(135deg, var(--bg-card), #D5DBDB);
     border-radius: 12px;
     border: 2px solid var(--accent-color);
 }
@@ -674,7 +674,7 @@ body {
     position: absolute;
     top: -10px;
     left: var(--spacing-lg);
-    background: linear-gradient(45deg, var(--highlight), #FF6347);
+    background: linear-gradient(45deg, var(--highlight), #F1948A);
     color: white;
     padding: 4px 12px;
     border-radius: 12px;
@@ -761,7 +761,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(139, 69, 19, 0.8);
+    background: rgba(44, 62, 80, 0.8);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -842,7 +842,7 @@ body {
 }
 
 .highlight-text {
-    background: linear-gradient(120deg, var(--secondary-color) 0%, var(--secondary-color) 100%);
+    background: linear-gradient(120deg, #D5DBDB 0%, #D5DBDB 100%);
     padding: var(--spacing-md);
     border-radius: 8px;
     border-left: 4px solid var(--accent-color);
@@ -869,7 +869,7 @@ body {
 }
 
 .spot {
-    background: linear-gradient(45deg, var(--accent-color), var(--secondary-color));
+    background: linear-gradient(45deg, var(--accent-color), #5DADE2);
     color: white;
     padding: var(--spacing-xs) var(--spacing-md);
     border-radius: 20px;
@@ -934,12 +934,12 @@ body {
 }
 
 .random-homepage {
-    background: linear-gradient(135deg, var(--highlight), #FF6347);
+    background: linear-gradient(135deg, var(--accent-color), #5DADE2);
     color: white;
     padding: var(--spacing-xl);
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 8px 24px rgba(255, 165, 0, 0.3);
+    box-shadow: 0 8px 24px rgba(52, 152, 219, 0.3);
 }
 
 .random-homepage h3 {
