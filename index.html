@@ -5,39 +5,427 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zephyr Peng</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Zephyr</h1>
-            <p class="subtitle">你的职业或身份</p>
-            <div class="links">
-                <a href="khalilpong777@gmail.com">Email</a>
-                <a href="https://github.com/khalilpong">GitHub</a>
-                <a href="cv.pdf">CV</a>
+    <!-- 侧边栏 -->
+    <aside class="sidebar">
+        <div class="sidebar-background"></div>
+        <div class="sidebar-content">
+            <div class="profile-section">
+                <div class="avatar-container">
+                    <img src="images/avatar.jpg" alt="头像" class="avatar">
+                    <div class="avatar-ring"></div>
+                </div>
+                <h1 class="name"></h1>
+                <h2 class="name-en">"Zephyr Peng"</h2>
+                <p class="title">Undergrad</p>
+                <p class="institution">University of Glasgow&UESTC</p>
             </div>
-        </header>
-        
-        <main>
-            <section class="intro">
-                <h2>About me</h2>
-                <p>...</p>
-            </section>
+
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#about" class="nav-link active">About me</a></li>
+                    <li><a href="#research" class="nav-link">Research</a></li>
+                    <li><a href="#experience" class="nav-link">Experiences</a></li>
+                    <li><a href="#publications" class="nav-link">Publications</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#interests" class="nav-link">Hobbies</a></li>
+                    <li><a href="#contact" class="nav-link">Contact me</a></li>
+                </ul>
+            </nav>
+
+            <div class="social-links">
+                <a href="mailto:khalilpong777@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/khalilpong" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://scholar.google.com/citations?user=YOUR_ID" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                <a href="https://linkedin.com/in/yourprofile" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/yourusername" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://orcid.org/YOUR_ORCID" title="ORCID"><i class="fab fa-orcid"></i></a>
+            </div>
+
+            <div class="sidebar-footer">
+                <p>&copy; 2025 Zephyr Peng</p>
+                <p class="last-updated">last updates: <span id="last-updated"></span></p>
+            </div>
+        </div>
+    </aside>
+
+    <!-- 主内容区域 -->
+    <main class="main-content">
+        <!-- 关于我 -->
+        <section id="about" class="content-section active">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <div class="section-line"></div>
+            </div>
             
-            <section class="research">
-                <h2>research interests</h2>
-                <p>...</p>
-            </section>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="greeting-card">
+                        <h3>🎯 虚拟问候</h3>
+                        <p>Hello，I'm<strong>Zephyr</strong>.</p>
+                    </div>
+
+                    <div class="quick-links">
+                        <a href="files/cv.pdf" class="btn btn-primary">
+                            <i class="fas fa-file-pdf"></i> CV (2025)
+                        </a>
+                        <a href="https://scholar.google.com" class="btn btn-secondary">
+                            <i class="fas fa-graduation-cap"></i> Google Scholar
+                        </a>
+                        <a href="#research" class="btn btn-secondary">
+                            <i class="fas fa-flask"></i> Research
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-calendar"></i> Chat with me
+                        </a>
+                    </div>
+                </div>
+
+                <div class="about-image">
+                    <img src="images/profile.jpg" alt="个人照片" class="profile-photo">
+                    <div class="image-caption">
+                        <p>📍 拍摄于某个有意义的地方</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bio-section">
+                <h3>📖 profile</h3>
+                <p class="bio-text">
+                    I'm<strong>Glasgow College</strong>undergrad for communication engineering，导师是<a href="#">教授姓名</a>。
+                    我的研究工作得到了<span class="highlight">某某奖学金</span>的支持。我也是<strong>某公司</strong>的兼职研究员。
+                </p>
+                
+                <p class="bio-text">
+                    我来自<strong>你的家乡</strong>，这里是熊猫的故乡🐼。我为母校<strong>你的高中</strong>感到自豪。
+                    根据Myers-Briggs测试，我是<span class="personality-type">INFJ</span>型人格，朋友们说我很符合这种性格的典型特征😄。
+                </p>
+
+                <div class="achievements">
+                    <h4>🏆 最近成就</h4>
+                    <ul>
+                        <li>🥇 获得ACL 2023优秀论文奖</li>
+                        <li>🎓 获得优秀研究生导师奖</li>
+                        <li>📚 共同组织了多个学术会议</li>
+                        <li>🔬 发表了多篇高质量论文</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="expandable-section">
+                <button class="expand-btn" onclick="toggleSection('fun-facts')">
+                    <i class="fas fa-chevron-down"></i> 更多有趣的事实...
+                </button>
+                <div class="expandable-content" id="fun-facts">
+                    <div class="fun-grid">
+                        <div class="fun-item">
+                            <h4>🎮 游戏爱好</h4>
+                            <p>我认真考虑过从事游戏设计工作，虽然最终选择了不同的道路，但这为我在具身AI研究中的模拟器编程提供了很好的准备。</p>
+                            <div class="game-tags">
+                                <span class="tag">沙盒游戏</span>
+                                <span class="tag">RPG</span>
+                                <span class="tag">解谜游戏</span>
+                            </div>
+                        </div>
+                        
+                        <div class="fun-item">
+                            <h4>📚 文学爱好</h4>
+                            <p>我热爱文学和戏剧，特别对莎士比亚的戏剧、传统中国戏曲、拉丁美洲文学和现代亚洲文学感兴趣。</p>
+                        </div>
+                        
+                        <div class="fun-item">
+                            <h4>🎬 电影品味</h4>
+                            <p>我热爱电影，最近迷上了捷克斯洛伐克新浪潮和心理惊悚片。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 研究工作 -->
+        <section id="research" class="content-section">
+            <div class="section-header">
+                <h2>Research</h2>
+                <div class="section-line"></div>
+            </div>
             
-            <section class="interests">
-                <h2>hobbies</h2>
-                <p>...</p>
-            </section>
-        </main>
-        
-        <footer>
-            <p>&copy; 2025 Zephyr Peng.</p>
-        </footer>
-    </div>
+            <div class="research-overview">
+                <h3>🔬 研究兴趣</h3>
+                <p class="research-formula">
+                    我的研究兴趣 = (<span class="highlight">语言</span> + <span class="highlight">交互</span> + <span class="highlight">具身性</span>) × <span class="highlight">认知科学</span>
+                </p>
+                
+                <div class="research-areas">
+                    <div class="research-card">
+                        <div class="card-icon">🤖</div>
+                        <h4>具身人工智能</h4>
+                        <p>研究智能体如何在物理和虚拟环境中学习和交互</p>
+                    </div>
+                    <div class="research-card">
+                        <div class="card-icon">💬</div>
+                        <h4>自然语言处理</h4>
+                        <p>探索语言理解和生成的先进技术</p>
+                    </div>
+                    <div class="research-card">
+                        <div class="card-icon">🧠</div>
+                        <h4>认知科学</h4>
+                        <p>将认知科学原理应用于AI系统设计</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="current-work">
+                <h3>🚀 当前项目</h3>
+                <div class="project-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4>项目名称1</h4>
+                            <p class="project-period">2024 - 现在</p>
+                            <p>项目详细描述...</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4>项目名称2</h4>
+                            <p class="project-period">2023 - 2024</p>
+                            <p>项目详细描述...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 经历 -->
+        <section id="experience" class="content-section">
+            <div class="section-header">
+                <h2>Experience</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="experience-timeline">
+                <div class="exp-item">
+                    <div class="exp-date">2021 - 现在</div>
+                    <div class="exp-content">
+                        <h3>博士研究生</h3>
+                        <h4>密歇根大学</h4>
+                        <p>计算机科学与工程系，导师：某某教授</p>
+                        <ul>
+                            <li>获得Weinberg认知科学奖学金支持</li>
+                            <li>发表多篇顶级会议论文</li>
+                            <li>获得优秀研究生导师奖</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="exp-item">
+                    <div class="exp-date">2023 - 现在</div>
+                    <div class="exp-content">
+                        <h3>兼职研究员</h3>
+                        <h4>Adobe Research</h4>
+                        <p>参与前沿AI研究项目</p>
+                    </div>
+                </div>
+                
+                <div class="exp-item">
+                    <div class="exp-date">2022 - 2023</div>
+                    <div class="exp-content">
+                        <h3>研究实习生</h3>
+                        <h4>Amazon Science</h4>
+                        <p>参与Alexa相关研究，获得Amazon Alexa Prize Award</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 发表论文 -->
+        <section id="publications" class="content-section">
+            <div class="section-header">
+                <h2>Publications</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="publications-list">
+                <div class="pub-year">2023</div>
+                <div class="pub-item featured">
+                    <div class="pub-badge">🏆 Outstanding Paper</div>
+                    <h3>论文标题</h3>
+                    <p class="pub-authors"><strong>你的名字</strong>, 合作者1, 合作者2</p>
+                    <p class="pub-venue">ACL 2023</p>
+                    <div class="pub-links">
+                        <a href="#" class="pub-link">PDF</a>
+                        <a href="#" class="pub-link">Code</a>
+                        <a href="#" class="pub-link">Slides</a>
+                    </div>
+                </div>
+                
+                <div class="pub-item">
+                    <h3>另一篇论文标题</h3>
+                    <p class="pub-authors">合作者1, <strong>你的名字</strong>, 合作者2</p>
+                    <p class="pub-venue">ICLR 2023</p>
+                    <div class="pub-links">
+                        <a href="#" class="pub-link">PDF</a>
+                        <a href="#" class="pub-link">Code</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 项目作品 -->
+        <section id="projects" class="content-section">
+            <div class="section-header">
+                <h2>Projects</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/project1.jpg" alt="项目1">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">查看详情</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>项目名称1</h3>
+                        <p>项目简短描述...</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">AI</span>
+                            <span class="tag">Research</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/project2.jpg" alt="项目2">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">查看详情</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>项目名称2</h3>
+                        <p>项目简短描述...</p>
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Web</span>
+                            <span class="tag">UI/UX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 兴趣爱好 -->
+        <section id="interests" class="content-section">
+            <div class="section-header">
+                <h2>Interests</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="interests-content">
+                <div class="hobby-section">
+                    <h3>🎮 游戏世界</h3>
+                    <p>我享受的游戏类型:</p>
+                    <div class="game-categories">
+                        <div class="game-category">
+                            <h4>🏗️ 沙盒游戏</h4>
+                            <p>MineCraft, Terraria</p>
+                        </div>
+                        <div class="game-category">
+                            <h4>📖 故事驱动RPG</h4>
+                            <p>Stardew Valley, Undertale, The Stanley Parable</p>
+                        </div>
+                        <div class="game-category">
+                            <h4>🧩 解谜平台</h4>
+                            <p>Gorogoa, Limbo, Inside, Chants of Sennaar</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hobby-section">
+                    <h3>🌿 植物标本</h3>
+                    <p class="highlight-text">最近，我对植物标本馆产生了浓厚的兴趣，刚开始制作个人植物标本日记！</p>
+                </div>
+                
+                <div class="virtual-travel">
+                    <h3>🗺️ 虚拟旅行</h3>
+                    <p>当我疲惫但无法真正旅行时，我会进行虚拟冒险：在Google地图上随机搜索偏远目的地并标记。以下是一些我发誓总有一天会亲自造访的地方...</p>
+                    <div class="travel-spots">
+                        <span class="spot">🏔️ 冰岛</span>
+                        <span class="spot">🏝️ 马尔代夫</span>
+                        <span class="spot">🌸 日本</span>
+                        <span class="spot">🦘 澳大利亚</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系方式 -->
+        <section id="contact" class="content-section">
+            <div class="section-header">
+                <h2>Contact</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-card">
+                    <h3>☕ 虚拟咖啡聊天</h3>
+                    <p>如果你想与我进行随机的（虚拟）咖啡聊天，请访问我的<a href="https://calendly.com/yourusername">Calendly页面</a>。
+                    如果你想分享压力或只是想聊聊生活（当我有时间的时候），我很乐意交流。</p>
+                    
+                    <div class="mental-health-note">
+                        <p><strong>注意：</strong>如果你需要专业的心理健康支持，请查看<a href="#">校园心理健康资源</a>。</p>
+                    </div>
+                </div>
+                
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>邮箱</h4>
+                            <p>your.email@example.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>地址</h4>
+                            <p>密歇根大学<br>计算机科学与工程系</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <i class="fas fa-calendar-check"></i>
+                        <div>
+                            <h4>预约会面</h4>
+                            <p><a href="https://calendly.com/yourusername">通过Calendly预约</a></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="random-homepage">
+                    <h3>🎲 随机访问朋友的主页</h3>
+                    <p>来个数字版的串门吧，省去了尴尬的小聊天和"不好意思，我家有点乱"的借口！</p>
+                    <button class="btn btn-fun" onclick="visitRandomHomepage()">
+                        <i class="fas fa-dice"></i> 随机访问
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 移动端菜单按钮 -->
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <script src="script.js"></script>
 </body>
 </html>
